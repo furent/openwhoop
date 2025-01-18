@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend   
+      dockerfile: Dockerfile.rust 
+    expose:
+      - "8000"
+
+  frontend:
+    build:
+      context: ./webapp/whoomp
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" 
+    depends_on:
+      - backend
