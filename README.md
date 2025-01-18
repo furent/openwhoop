@@ -10,10 +10,19 @@ cp .env.example .env
 cargo run -r -- scan
 ```
 
-After you find your device copy its address to `.env` under `WHOOP_ADDR`, and you can download data from your whoop by running:
+### How to Run the webapp using docker?
+
+You can built the webapp manually using docker. Execute the following commands in the root folder `openwhoop`.
+
 ```sh
-cargo run -r -- download-history
+docker compose build
+docker compose up
 ```
+
+The app runs now at `http://localhost:8080/`.
+
+Or you can get the prebuilt image from docker hub:
+TODO
 
 
 ## TODO:
