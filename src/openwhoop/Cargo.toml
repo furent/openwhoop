@@ -19,4 +19,5 @@ migration.path = "../sea-migrations"
 sea-orm = "1.1.4"
 tokio = { version = "1.43.0", features = ["rt-multi-thread", "macros"] }
 uuid = { version = "1.11.1", features = ["v4"] }
+dialoguer = "0.10"
 whoop = { version = "0.1.0", path = "../whoop" }
