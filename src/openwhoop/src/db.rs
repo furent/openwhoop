@@ -150,6 +150,7 @@ impl DatabaseHandler {
         wtr.write_record(&["time", "bpm", "rr_intervals", "activity"])?;
 
         let heart_rate_data = db_entities::heart_rate::Entity::find()
+            .order_by_desc(db_entities::heart_rate::Column::Time)
             .all(&self.db)
             .await?;
 
