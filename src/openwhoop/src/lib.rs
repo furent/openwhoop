@@ -11,3 +11,7 @@ mod openwhoop;
 pub use openwhoop::OpenWhoop;
 
 pub mod algo;
+
+pub mod types;
+
+pub(crate) mod helpers;
